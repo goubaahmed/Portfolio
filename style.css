@@ -10,6 +10,7 @@
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;  /* عشان لما اضغط على لينك يروح بسلاسة */
 }
    body {
     width: 100%;
@@ -53,7 +54,6 @@ html{
 .header .logo:hover{
     color: wheat;
     border-bottom: 2px solid wheat;
-    margin: 0 -2px;
     text-shadow: 2px 2px 8px rgb(143, 5, 5);
 }
 
@@ -65,8 +65,8 @@ html{
     list-style: none;
 }
 .header ul li a{
-   position: relative;
-   display:inline-block ;
+    position: relative;
+    display:inline-block ;
     color:  rgb(165, 5, 5);
     font-size: 1.6rem;
     font-weight:700;
@@ -74,11 +74,9 @@ html{
     letter-spacing: 1px;
     padding: 6px 0;
     cursor: pointer;
-    /* border-bottom: 3px solid rgb(201, 7, 7);    transition: 0.3s; */
 }
 .header ul li a:hover{
     color: wheat;
-    /* border-bottom: 2px solid wheat; */
     margin: 0 -2px;
     text-shadow: 2px 2px 8px rgb(143, 5, 5);
 }
@@ -97,11 +95,10 @@ html{
   left: 0;
 }
 .content{
-    position: relative;
+    display: flex;
     width: 100%;
     height: 80vh;
     justify-content: center;
-    display: flex;
     align-items: center;
 }
 .content .text{
@@ -160,8 +157,8 @@ html{
 .content .button{
     position: relative;
     margin: 0 10px;
-    overflow: hidden;
     top: 80PX;
+
     right: 364px;
     width: 50px;
     align-items: center;
@@ -229,6 +226,8 @@ html{
 .titel {
     /* position: absolute; ← احذفها */
     margin: 40px auto;
+     flex-wrap: wrap;
+    display: inline-block;
     text-align: center;
     font-size: 20px;
     width: 80%;
@@ -247,21 +246,25 @@ html{
 .titel h3{
     position: relative;
     bottom: 85px;
-    font-size: 2.8rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 550;
     margin: 10px 40px 0px 40px ;   
 }
 .titel p{
     position: relative;
     top: 350px;
+    flex-wrap: wrap;
+    display: inline-block;
+    text-align: center;
     font-size: 2rem;
+    justify-content: center;
+    line-height: 1.8;
     font-weight: 600;
-    margin: 10px 40px 0px 40px ;
     color: wheat;
 }
 .img img{
     position: relative;
-   bottom : 200px;
+   bottom : 250px;
     height: 340px;
     width:300px;
     object-fit:cover ;
@@ -403,6 +406,7 @@ html{
   padding: 100px 0 0 0;
   left: 50px;
   bottom: 400px;
+  flex-wrap: wrap;
   border-radius: 25%;
   transition: .9s;
   opacity: 0; 
@@ -490,3 +494,244 @@ html{
   box-shadow: 2px 2px 8px rgb(143, 5, 5);
 }
 /* contact end */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .header {
+   display: inline-block;
+   justify-content: center;
+   align-items: center;
+   height: 100px;
+   width: 80%;
+  } 
+  .header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+  }
+  .content {
+    position: relative;
+    top: 150px;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    margin-bottom: 200px;
+
+  }
+  .content .text {
+    position: relative;
+    width: 90%;
+    left: 0;
+    height: 40%;
+    top: 250px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .content .img {
+    position: static;
+    right: 0;
+    top: 0;
+    margin-bottom: 20px;
+  }
+  .content .img img {
+    width: 200px;
+    height: 220px;
+  }
+   .content .button1 {
+  position: relative;
+  bottom: 150px; 
+  left: 530px;
+   }
+.content .button1 button{
+  position: relative;
+  TOP:-40px;
+  right: 520px;
+}
+  .content .button a{
+  position: relative;
+  left: 50px;
+  bottom: 100px;
+  font-size: 1.7rem;
+  line-height: 1.6;
+  font-weight: 500;
+  flex-direction:column-reverse;
+  margin: auto;
+  }
+  .titel h2{
+     display: block;
+    text-align: center;
+    font-size: 2.8rem;
+    font-size: 400;
+  }
+  .titel h3{
+     display: block;
+    text-align: center;
+     font-size: 2.0rem;
+    font-size: 300;
+  }
+.img img{
+    bottom:181px;
+  } 
+  .titel{
+    flex-wrap: wrap;
+    display: inline-block;
+    text-align: center;
+  }
+  .titel p{
+    width: 600px;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    text-align: center;
+    justify-content: center;
+   
+  }
+  .skills-list {
+    gap: 40px;
+  }
+  .row{
+    flex-wrap: wrap;
+    flex-direction:column-reverse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* phone */
+@media(max-width:668px ){
+.header {
+   display: inline-block;
+   justify-content: center;
+   align-items: center;
+   height: 100px;
+   width: 80%;
+  } 
+  .header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+  }
+  .content {
+    left: 200px;
+    margin: 50px;
+  }
+  .content .text {
+    position: relative;
+    width: 630px;
+    left: 0;
+    height: 40%;
+    top: 360px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .content .img {
+    position: static;
+    right: 0;
+    top: 0;
+    margin-bottom: 20px;
+  }
+  .content .img img {
+    width: 280px;
+    height: 300px;
+  }
+   .content .button1 {
+    position: relative;
+    bottom: 154px; 
+    left: 500px;
+   }
+.content .button1 button{
+  position: relative;
+  TOP:-40px;
+  right: 520px;
+}
+  .content .button a{
+  position: relative;
+  left: 100px;
+  top: 10px;
+  font-size: 1.7rem;
+  line-height: 2;
+  font-weight: 500;
+  flex-direction:column-reverse;
+  margin: auto;
+  }
+    .titel {
+      height: 150vh;
+      top: 100px;
+    }
+  .titel h2{
+    top:150px;
+   text-align: center;
+   font-size: 2.8rem;
+   font-size: 400;
+  }
+  .titel h3{
+    top: 100px;
+   text-align: center;
+   font-size: 1rem;
+   font-size: 300;
+  }
+.img img{
+    bottom:120px;
+    height: 310px;
+    
+  } 
+  .titel{
+    position: relative;
+    left: 100px;
+    display: flex;
+    width: 480px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    
+  }
+  .titel p{
+    top: 450px;
+    width: 900px;
+    font-size: 1.3rem;
+    line-height: 1;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .skills{
+   position: relative;
+   left: 100px;
+   width: 500px;
+  } 
+   .skills-list {
+    position: relative;
+    display: grid;
+    flex-wrap: wrap;   
+  }  
+  .row{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container3{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    width: 720px;
+  }
+  #contact{
+  width: 711px;
+  }
+    }
